@@ -2,8 +2,8 @@
 import pytest
 from rdflib import URIRef
 
-from ontouml_vocabulary_lib.ontouml import OntoUML
-from ontouml_vocabulary_lib.ouexception import OUUnavailableTerm
+from ontouml_vocabulary_lib.terms import OntoUML
+from ontouml_vocabulary_lib.exceptions import OUUnavailableTerm
 from ontouml_vocabulary_lib.tests.test_ontouml.fixtures_test_ontouml import (
     ALL_TERMS_FRAGMENT,
     ALL_TERMS_STR,
