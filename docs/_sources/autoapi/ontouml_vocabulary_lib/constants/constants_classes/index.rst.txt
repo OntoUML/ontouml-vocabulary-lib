@@ -1,0 +1,64 @@
+:py:mod:`ontouml_vocabulary_lib.constants.constants_classes`
+============================================================
+
+.. py:module:: ontouml_vocabulary_lib.constants.constants_classes
+
+.. autoapi-nested-parse::
+
+   This module defines various tuples of OntoUML Class Stereotypes used in OntoUML modeling.
+
+   Each tuple represents a specific grouping of stereotypes, providing a structured and
+   semantically relevant means to access and utilize the stereotypes in OntoUML modeling.
+
+   All tuples are provided sorted in alphabetical order.
+
+
+
+Module Contents
+---------------
+
+.. py:data:: ONTOUML_BASE_SORTAL_CLASS_STEREOTYPES
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_ULTIMATE_SORTAL_CLASS_STEREOTYPES
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_SORTAL_CLASS_STEREOTYPES
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_NON_SORTAL_CLASS_STEREOTYPES
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_ABSTRACT_CLASS_STEREOTYPES
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_RIGID_CLASS_STEREOTYPES
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_ANTI_RIGID_CLASS_STEREOTYPES
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_SEMI_RIGID_CLASS_STEREOTYPES
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_CLASS_STEREOTYPES
+   :value: ()
+
+   
+

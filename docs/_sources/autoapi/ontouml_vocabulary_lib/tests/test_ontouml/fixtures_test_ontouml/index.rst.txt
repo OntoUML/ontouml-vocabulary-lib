@@ -1,0 +1,42 @@
+:py:mod:`ontouml_vocabulary_lib.tests.test_ontouml.fixtures_test_ontouml`
+=========================================================================
+
+.. py:module:: ontouml_vocabulary_lib.tests.test_ontouml.fixtures_test_ontouml
+
+.. autoapi-nested-parse::
+
+   Fixtures for testing the OntoUML class's methods.
+
+   This module contains fixtures for testing various aspects of OntoUML, including validation of terms and URIs based on
+   the OntoUML vocabulary. It defines lists of valid and invalid inputs, along with the expected fragments and strings
+   for OntoUML terms and URIs.
+
+
+
+Module Contents
+---------------
+
+.. py:data:: ALL_TERMS_FRAGMENT
+   :value: ['abstract', 'abstractNature', 'aggregationKind', 'AggregationKind', 'attribute', 'begin',...
+
+   
+
+.. py:data:: ALL_TERMS_STR
+   :value: ['https://w3id.org/ontouml#abstract', 'https://w3id.org/ontouml#abstractNature',...
+
+   
+
+.. py:data:: OK_BASE_URI
+   :value: 'https://w3id.org/ontouml#'
+
+   
+
+.. py:data:: NOK_BASE_URI
+   :value: 'https://example.org/'
+
+   
+
+.. py:data:: INVALID_INPUTS
+
+   
+

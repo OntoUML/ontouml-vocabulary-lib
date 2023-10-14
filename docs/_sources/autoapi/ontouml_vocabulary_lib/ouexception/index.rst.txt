@@ -1,0 +1,34 @@
+:py:mod:`ontouml_vocabulary_lib.ouexception`
+============================================
+
+.. py:module:: ontouml_vocabulary_lib.ouexception
+
+.. autoapi-nested-parse::
+
+   Module for handling custom exceptions related to OntoUML.
+
+   This module provides a set of custom exceptions designed for handling various error scenarios
+   that may occur in the manipulation and management of OntoUML graphs and related operations.
+   Each exception is designed to provide clear, user-friendly error messages to assist in
+   debugging and issue resolution.
+
+
+
+Module Contents
+---------------
+
+.. py:exception:: OUUnavailableTerm(ou_term)
+
+
+   Bases: :py:obj:`ValueError`
+
+   Custom exception for handling cases where an OUTerm is unavailable in the OntoUML Vocabulary.
+
+   This exception is raised when a given OUTerm does not exist or is not found in the OntoUML
+   Vocabulary, providing clear feedback that the requested term is unavailable or incorrectly
+   specified.
+
+   :param ou_term: The OUTerm that does not exist in the OntoUML Vocabulary.
+   :type ou_term: str
+
+

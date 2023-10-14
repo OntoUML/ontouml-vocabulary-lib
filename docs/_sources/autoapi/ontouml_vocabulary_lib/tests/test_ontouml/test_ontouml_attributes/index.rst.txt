@@ -1,0 +1,97 @@
+:py:mod:`ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_attributes`
+===========================================================================
+
+.. py:module:: ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_attributes
+
+.. autoapi-nested-parse::
+
+   Module for testing exclusively the attributes of the OntoUML class.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_attributes.test_internal_term_presence_and_type
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_attributes.test_ontouml_terms_as_uri_references
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_attributes.test_ontouml_term_matching_uri
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_attributes.test_ontouml_has_valid_attributes
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_attributes.test_ontouml_term_excludes_invalid_variations
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_attributes.test_ontouml_term_accessibility
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_attributes.test_invalid_ontouml_term_access
+
+
+
+.. py:function:: test_internal_term_presence_and_type()
+
+   Ensure internal terms in OntoUML are present in ALL_TERMS_STR and are instances of URIRef.
+
+   This function loops through every internal term of the OntoUML class, converts it to a Python datatype if possible,
+   and then verifies:
+   - Its presence in the predefined ALL_TERMS_STR list.
+   - Its instantiation from the rdflib.URIRef class.
+
+
+.. py:function:: test_ontouml_terms_as_uri_references(term)
+
+   Check if OntoUML terms can be recognized as valid URI references.
+
+   :param term: A term from the ALL_TERMS_STR list, representing an OntoUML term.
+   :type term: str
+   :raises AssertionError: If the URIRef of the term is not found in OntoUML's directory.
+
+
+.. py:function:: test_ontouml_term_matching_uri(term)
+
+   Verify that accessing an OntoUML term provides a URI combining OK_BASE_URI and the term itself.
+
+   :param term: A term from the ALL_TERMS_STR list, representing an OntoUML term.
+   :type term: str
+   :raises AssertionError: If the assembled URI does not match the expected format.
+
+
+.. py:function:: test_ontouml_has_valid_attributes(term)
+
+   Verifies that OntoUML possesses the specified attributes.
+
+   :param term: The attribute name to be checked.
+   :type term: str
+
+
+.. py:function:: test_ontouml_term_excludes_invalid_variations(term)
+
+   Assert that called_term doesn't match any of the undesired/invalid variations.
+
+   :param term: A term from the ALL_TERMS_STR list, representing an OntoUML term.
+   :type term: str
+   :raises AssertionError: If called_term matches any pattern in the invalid_variations list.
+
+
+.. py:function:: test_ontouml_term_accessibility(term)
+
+   Verify that each term from ALL_TERMS_STR in OntoUML can be accessed without exceptions and is not None.
+
+   Using getattr, the function dynamically retrieves OntoUML class attributes using terms from ALL_TERMS_STR, ensuring:
+   - The accessed attribute is not None.
+   - No exceptions are raised during access. If an exception occurs, the function fails and provides an error
+   message with the exception’s details.
+
+   :param term: A term from the ALL_TERMS_STR list, representing an OntoUML term to be accessed.
+   :type term: str
+   :raises pytest.fail: If accessing the term raises any Exception, detailing the exception in the error message.
+
+
+.. py:function:: test_invalid_ontouml_term_access(input_string)
+
+   Ensure that attempting to access invalid OntoUML terms raises AttributeError.
+
+   :param input_string: A string input intended to represent an invalid OntoUML term.
+   :type input_string: str
+
+

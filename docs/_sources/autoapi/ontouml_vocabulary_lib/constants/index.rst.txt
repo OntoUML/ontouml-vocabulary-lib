@@ -1,0 +1,24 @@
+:py:mod:`ontouml_vocabulary_lib.constants`
+==========================================
+
+.. py:module:: ontouml_vocabulary_lib.constants
+
+.. autoapi-nested-parse::
+
+   Constants sub-package.
+
+   This package contains modules that define various constants related to OntoUML vocabulary, including class stereotypes,
+   relation stereotypes, property stereotypes, and other miscellaneous constants.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   constants_classes/index.rst
+   constants_misc/index.rst
+
+

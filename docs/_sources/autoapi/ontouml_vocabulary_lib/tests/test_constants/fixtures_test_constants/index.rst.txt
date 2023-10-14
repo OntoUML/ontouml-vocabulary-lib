@@ -1,0 +1,111 @@
+:py:mod:`ontouml_vocabulary_lib.tests.test_constants.fixtures_test_constants`
+=============================================================================
+
+.. py:module:: ontouml_vocabulary_lib.tests.test_constants.fixtures_test_constants
+
+.. autoapi-nested-parse::
+
+   Fixtures for testing the OntoUML constants.
+
+   This module provides fixtures for testing the constant values defined in the OntoUML vocabulary library. It imports
+   various sets of predefined constants from the OntoUML vocabulary library and defines a dictionary to store the expected
+   size of these sets. It also provides a set of utility functions for performing basic manipulations on tuples, which are
+   used to generate a list of mutated tuples for testing.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   ontouml_vocabulary_lib.tests.test_constants.fixtures_test_constants.swap_first_two
+   ontouml_vocabulary_lib.tests.test_constants.fixtures_test_constants.remove_first
+   ontouml_vocabulary_lib.tests.test_constants.fixtures_test_constants.add_element
+   ontouml_vocabulary_lib.tests.test_constants.fixtures_test_constants.replace_last
+   ontouml_vocabulary_lib.tests.test_constants.fixtures_test_constants.reverse_order
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   ontouml_vocabulary_lib.tests.test_constants.fixtures_test_constants.DICT_TUPLES_SIZE
+   ontouml_vocabulary_lib.tests.test_constants.fixtures_test_constants.MUTATIONS
+   ontouml_vocabulary_lib.tests.test_constants.fixtures_test_constants.TUPLES
+   ontouml_vocabulary_lib.tests.test_constants.fixtures_test_constants.MUTANTS
+
+
+.. py:data:: DICT_TUPLES_SIZE
+
+   
+
+.. py:function:: swap_first_two(original)
+
+   Swap the first two elements of a given tuple.
+
+   :param original: The original tuple.
+   :type original: tuple
+   :return: A new tuple with the first two elements swapped. If the tuple has fewer than two elements, returns the
+            original tuple unmodified.
+   :rtype: tuple
+
+
+.. py:function:: remove_first(original)
+
+   Remove the first element from a given tuple.
+
+   :param original: The original tuple.
+   :type original: tuple
+   :return: A new tuple with the first element removed.
+   :rtype: tuple
+
+
+.. py:function:: add_element(original)
+
+   Add a None element to the end of a given tuple.
+
+   :param original: The original tuple.
+   :type original: tuple
+   :return: A new tuple with a None element added at the end.
+   :rtype: tuple
+
+
+.. py:function:: replace_last(original)
+
+   Replace the last element of a given tuple with the string "REPLACEMENT".
+
+   :param original: The original tuple.
+   :type original: tuple
+   :return: A new tuple with the last element replaced by "REPLACEMENT".
+   :rtype: tuple
+
+
+.. py:function:: reverse_order(original)
+
+   Reverse the order of elements in a given tuple.
+
+   :param original: The original tuple.
+   :type original: tuple
+   :return: A new tuple with the order of elements reversed.
+   :rtype: tuple
+
+
+.. py:data:: MUTATIONS
+
+   
+
+.. py:data:: TUPLES
+
+   
+
+.. py:data:: MUTANTS
+
+   
+

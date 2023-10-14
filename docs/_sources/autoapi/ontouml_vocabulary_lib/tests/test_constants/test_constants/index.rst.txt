@@ -1,0 +1,95 @@
+:py:mod:`ontouml_vocabulary_lib.tests.test_constants.test_constants`
+====================================================================
+
+.. py:module:: ontouml_vocabulary_lib.tests.test_constants.test_constants
+
+.. autoapi-nested-parse::
+
+   Testing Module for OntoUML Tuple Validation
+
+   This module carries out tests to validate tuples utilized in the OntoUML model, ensuring that elements contained
+   within them adhere to the defined criteria (e.g., non-null, type adherence, etc.) and overall tuple integrity
+   (e.g., non-emptiness, expected size, etc.).
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   ontouml_vocabulary_lib.tests.test_constants.test_constants.test_elements_are_non_null_and_of_type_URIRef
+   ontouml_vocabulary_lib.tests.test_constants.test_constants.test_first_element_of_tuple_is_truthy
+   ontouml_vocabulary_lib.tests.test_constants.test_constants.test_tuple_is_not_empty
+   ontouml_vocabulary_lib.tests.test_constants.test_constants.test_tuple_size_matches_expected
+   ontouml_vocabulary_lib.tests.test_constants.test_constants.test_elements_are_unique
+   ontouml_vocabulary_lib.tests.test_constants.test_constants.test_elements_are_in_alphabetical_order
+   ontouml_vocabulary_lib.tests.test_constants.test_constants.test_tuple_mutation
+
+
+
+.. py:function:: test_elements_are_non_null_and_of_type_URIRef(in_tuple)
+
+   Ensure each element within the tuple is non-null and an instance of URIRef.
+
+   :param in_tuple: The tuple whose elements are to be checked for non-nullity and type URIRef.
+   :type in_tuple: tuple
+
+
+.. py:function:: test_first_element_of_tuple_is_truthy(in_tuple)
+
+   Assert the first element of the tuple evaluates to True.
+
+   :param in_tuple: The tuple whose first element is to be asserted as truthy.
+   :type in_tuple: tuple
+
+
+.. py:function:: test_tuple_is_not_empty(in_tuple)
+
+   Ensure the provided tuple is not empty.
+
+   :param in_tuple: The tuple to be checked for non-emptiness.
+   :type in_tuple: tuple
+
+
+.. py:function:: test_tuple_size_matches_expected(in_tuple, size)
+
+   Confirm the provided tuple's size matches the expected size.
+
+   :param in_tuple: The tuple whose size is to be checked.
+   :type in_tuple: tuple
+   :param size: The expected size of the tuple.
+   :type size: int
+
+
+.. py:function:: test_elements_are_unique(in_tuple)
+
+   Test to ensure that all elements within a tuple are unique.
+
+   :param in_tuple: The input tuple whose elements are to be verified for uniqueness.
+   :type in_tuple: tuple
+
+
+.. py:function:: test_elements_are_in_alphabetical_order(in_tuple)
+
+   Test to ensure that all elements within a tuple are in alphabetical order.
+
+   :param in_tuple: The input tuple whose elements are to be verified for order.
+   :type in_tuple: tuple
+
+
+.. py:function:: test_tuple_mutation(original, mutation_func, mutant)
+
+   Mutation test to ensure that tests can detect alterations in the original tuple.
+
+   :param original: The original tuple.
+   :type original: tuple
+   :param mutation_func: Function that applies mutation.
+   :param mutant: A mutated version of the original tuple.
+   :type mutant: tuple
+
+

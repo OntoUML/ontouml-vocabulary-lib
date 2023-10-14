@@ -1,0 +1,32 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: OntoUML Vocabulary Library
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Pedro Paulo
+    family-names: Favato Barcelos
+    email: p.p.favatobarcelos@utwente.nl
+    affiliation: University of Twente
+    orcid: 'https://orcid.org/0000-0003-2736-7817'
+identifiers:
+  - type: url
+    value: 'https://w3id.org/ontouml/ontouml_vocabulary_lib'
+    description: Git repository
+repository-code: 'https://w3id.org/ontouml/ontouml_vocabulary_lib'
+url: 'https://w3id.org/ontouml/ontouml_vocabulary_lib/docs'
+repository-artifact: 'https://pypi.org/project/ontouml_vocabulary_lib/'
+abstract: A Python library to allow users to easily manipulate concepts from the OntoUML Vocabulary when using RDFLib.
+keywords:
+  - ontouml
+  - ontology
+  - ontouml-vocabulary
+  - semantic-web
+  - knowledge-graph
+  - Python
+  - RDFLib
+license: Apache-2.0

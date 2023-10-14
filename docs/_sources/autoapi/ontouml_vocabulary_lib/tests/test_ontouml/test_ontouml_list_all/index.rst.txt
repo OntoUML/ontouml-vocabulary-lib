@@ -1,0 +1,76 @@
+:py:mod:`ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_list_all`
+=========================================================================
+
+.. py:module:: ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_list_all
+
+.. autoapi-nested-parse::
+
+   Module for testing exclusively the method list_all of the OntoUML class.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_list_all.test_get_list_all_method_valid_ontouml_attribute_existence
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_list_all.test_valid_term_in_ontouml_list
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_list_all.test_get_list_all_returns_correct_number_of_items
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_list_all.test_get_list_all_returns_valid_uriref_list
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_list_all.test_get_list_all_terms_include_correct_base_uri
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_list_all.test_get_list_all_raises_typeerror_with_arguments
+
+
+
+.. py:function:: test_get_list_all_method_valid_ontouml_attribute_existence()
+
+   Verifies if the list_all method returns valid terms and that these terms have the expected type.
+
+
+.. py:function:: test_valid_term_in_ontouml_list(term)
+
+   Verifies if a term exists in the list returned by OntoUML.get_list_all().
+
+   :param term: A term to be checked.
+   :type term: str
+
+
+.. py:function:: test_get_list_all_returns_correct_number_of_items()
+
+   Verifies if OntoUML.get_list_all() returns the same number of items as both the class attribute number
+   and the length of ALL_TERMS_STR.
+
+
+.. py:function:: test_get_list_all_returns_valid_uriref_list()
+
+   Validates that OntoUML.get_list_all() returns a valid list of URIRef objects.
+
+   Ensures that:
+   - The return type from OntoUML.list_all() is a list.
+   - The returned list is not None.
+   - Every term in the list is an instance of URIRef.
+   - No term in the list is None.
+
+
+.. py:function:: test_get_list_all_terms_include_correct_base_uri()
+
+   Ensures each term in OntoUML.get_list_all() contains the correct base URI and avoids incorrect ones.
+
+   Verifies that:
+   - Each term contains OK_BASE_URI.
+   - NOK_BASE_URI is not contained in any term.
+
+
+.. py:function:: test_get_list_all_raises_typeerror_with_arguments(in_arg)
+
+   Verifies that OntoUML.get_list_all() raises a TypeError when provided with an argument.
+
+   :param in_arg: An argument to be passed to OntoUML.list_all().
+   :type in_arg: Any
+
+

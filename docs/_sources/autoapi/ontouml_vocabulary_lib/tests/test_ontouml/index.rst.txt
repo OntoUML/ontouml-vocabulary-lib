@@ -1,0 +1,27 @@
+:py:mod:`ontouml_vocabulary_lib.tests.test_ontouml`
+===================================================
+
+.. py:module:: ontouml_vocabulary_lib.tests.test_ontouml
+
+.. autoapi-nested-parse::
+
+   Test OntoUML sub-package.
+
+   This sub-package contains modules for testing the OntoUML functionalities provided by the ontouml_vocabulary_lib.
+   It includes fixtures and test cases for validating the OntoUML model handling utilities.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   fixtures_test_ontouml/index.rst
+   test_ontouml_attributes/index.rst
+   test_ontouml_get_namespace/index.rst
+   test_ontouml_get_term/index.rst
+   test_ontouml_list_all/index.rst
+
+

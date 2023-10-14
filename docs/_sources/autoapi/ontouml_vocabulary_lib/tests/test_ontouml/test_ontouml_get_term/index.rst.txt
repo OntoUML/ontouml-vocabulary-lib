@@ -1,0 +1,81 @@
+:py:mod:`ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_term`
+=========================================================================
+
+.. py:module:: ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_term
+
+.. autoapi-nested-parse::
+
+   Module for testing exclusively the method get_namespace of the OntoUML class.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_term.test_string_representation_validity
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_term.test_term_retrieval_inclusion
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_term.test_get_term_type
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_term.test_get_term_with_invalid_inputs
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_term.test_get_term_with_no_argument
+
+
+
+.. py:function:: test_string_representation_validity(in_arg)
+
+   Test if the string representation of a retrieved OntoUML term is valid.
+
+   This test ensures that when provided with a valid term fragment as input, the `get_term` method returns
+   a term whose string representation is found within the predefined list of all term strings (ALL_TERMS_STR).
+
+   :param in_arg: A fragment of an OntoUML term used as input to retrieve the term.
+   :type in_arg: str
+
+
+.. py:function:: test_term_retrieval_inclusion(in_arg)
+
+   Test if a retrieved OntoUML term is included in the list of all OntoUML terms.
+
+   This test ensures that when provided with a valid term fragment as input, the `get_term` method returns
+   a term that is found within the predefined list of all OntoUML terms obtained through the `get_list_all` method.
+
+   :param in_arg: A fragment of an OntoUML term used as input to retrieve the term.
+   :type in_arg: str
+
+
+.. py:function:: test_get_term_type(in_arg)
+
+   Test if `get_term` returns instances of URIRef for valid term fragments.
+
+   The test ensures that when provided with a valid term fragment as input, the `get_term` method:
+   - Does not return None.
+   - Returns an instance of `URIRef`.
+
+   :param in_arg: A fragment of an OntoUML term.
+   :type in_arg: str
+
+
+.. py:function:: test_get_term_with_invalid_inputs(in_arg)
+
+   Test if `get_term` raises OUUnavailableTerm for invalid inputs.
+
+   This test ensures that when provided with an invalid input (that does not correspond to any OntoUML term),
+   the `get_term` method raises an exception of type `OUUnavailableTerm`.
+
+   :param in_arg: An invalid OntoUML term fragment.
+   :type in_arg: str
+
+
+.. py:function:: test_get_term_with_no_argument()
+
+   Test if `get_term` raises a TypeError when called without arguments.
+
+   This test ensures that when the `get_term` method is called without providing any input arguments,
+   it raises an exception of type `TypeError`.
+
+

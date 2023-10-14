@@ -1,0 +1,35 @@
+:py:mod:`ontouml_vocabulary_lib`
+================================
+
+.. py:module:: ontouml_vocabulary_lib
+
+.. autoapi-nested-parse::
+
+   OntoUML Vocabulary Library.
+
+   This library provides support for working with OntoUML models, including utilities for handling
+   OntoUML vocabulary terms, constants, and custom exceptions. It also includes a set of tests for
+   validating the functionality provided by the library.
+
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   constants/index.rst
+   tests/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   ontouml/index.rst
+   ouexception/index.rst
+
+

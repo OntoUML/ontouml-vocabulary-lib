@@ -1,4 +1,4 @@
-"""This module defines various tuples of OntoUML Stereotypes related to relations, properties,
+"""This module defines various tuples of OntoUML Stereotypes related to relations, properties, \
 aggregation kinds, ontological natures, and general elements, which are utilized in OntoUML modeling.
 
 Each tuple groups related stereotypes, offering a structured and semantically relevant method

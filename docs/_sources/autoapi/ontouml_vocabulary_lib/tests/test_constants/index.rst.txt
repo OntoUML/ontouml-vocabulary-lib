@@ -1,0 +1,24 @@
+:py:mod:`ontouml_vocabulary_lib.tests.test_constants`
+=====================================================
+
+.. py:module:: ontouml_vocabulary_lib.tests.test_constants
+
+.. autoapi-nested-parse::
+
+   Test Constants sub-package.
+
+   This sub-package contains modules for testing the constants defined in the constants package of the
+   ontouml_vocabulary_lib. It includes fixtures and test cases for validating the constants.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   fixtures_test_constants/index.rst
+   test_constants/index.rst
+
+

@@ -1,0 +1,59 @@
+:py:mod:`ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_namespace`
+==============================================================================
+
+.. py:module:: ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_namespace
+
+.. autoapi-nested-parse::
+
+   Module for testing exclusively the method get_namespace()of the OntoUML class.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_namespace.test_get_namespace_equals_ns_attribute_and_ok_base_uri
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_namespace.test_get_namespace_is_not_none_and_differs_from_nok_base_uri
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_namespace.test_get_namespace_returns_string_type
+   ontouml_vocabulary_lib.tests.test_ontouml.test_ontouml_get_namespace.test_get_namespace_raises_typeerror_with_argument
+
+
+
+.. py:function:: test_get_namespace_equals_ns_attribute_and_ok_base_uri()
+
+   Ensure get_namespace returns the expected namespace URI.
+
+   Validates that the OntoUML.get_namespace method returns a namespace URI equivalent to the '_NS' class attribute
+   and matches the predefined OK_BASE_URI.
+
+
+.. py:function:: test_get_namespace_is_not_none_and_differs_from_nok_base_uri()
+
+   Verify get_namespace returns a valid namespace.
+
+   Ensures the namespace returned by OntoUML.get_namespace is not None and does not equate to the
+   undesired NOK_BASE_URI.
+
+
+.. py:function:: test_get_namespace_returns_string_type()
+
+   Check the return type of get_namespace.
+
+   Ensures the namespace URI returned by OntoUML.get_namespace is a string, validating its format
+   for URI representation.
+
+
+.. py:function:: test_get_namespace_raises_typeerror_with_argument(in_arg)
+
+   Confirm get_namespace raises TypeError when provided an argument.
+
+   Tests various input types to ensure that the OntoUML.get_namespace method raises a TypeError when it is provided
+   with an argument, affirming its designed usage without parameters.
+
+

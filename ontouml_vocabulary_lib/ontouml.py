@@ -334,8 +334,7 @@ class OntoUML(DefinedNamespace):
 
     @classmethod
     def get_list_all(cls) -> list[URIRef]:
-        """
-        Retrieves a list of all public attributes of the OntoUML class, i.e., all terms contained in the OntoUML \
+        """Retrieve a list of all public attributes of the OntoUML class, i.e., all terms contained in the OntoUML \
         Vocabulary.
 
         This method uses introspection to find all attributes and methods of the OntoUML
@@ -369,8 +368,7 @@ class OntoUML(DefinedNamespace):
 
     @classmethod
     def get_term(cls, str_term: str) -> URIRef:
-        """
-        Retrieve the URIRef of a term from the OntoUML vocabulary.
+        """Retrieve the URIRef of a term from the OntoUML vocabulary.
 
         Given a term name as a string, this method retrieves its associated URIRef from the OntoUML vocabulary. The
         method ensures compliance with OntoUML vocabulary version 1.1.0. If the term is unavailable or nonexistent,

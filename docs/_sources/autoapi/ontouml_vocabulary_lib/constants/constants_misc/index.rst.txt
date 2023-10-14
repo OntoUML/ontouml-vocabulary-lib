@@ -1,0 +1,49 @@
+:py:mod:`ontouml_vocabulary_lib.constants.constants_misc`
+=========================================================
+
+.. py:module:: ontouml_vocabulary_lib.constants.constants_misc
+
+.. autoapi-nested-parse::
+
+   This module defines various tuples of OntoUML Stereotypes related to relations, properties, aggregation kinds, ontological natures, and general elements, which are utilized in OntoUML modeling.
+
+   Each tuple groups related stereotypes, offering a structured and semantically relevant method
+   for utilizing OntoUML stereotypes in model construction and verification.
+
+   All tuples are provided sorted in alphabetical order.
+
+
+
+Module Contents
+---------------
+
+.. py:data:: ONTOUML_RELATION_STEREOTYPES
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_PROPERTY_STEREOTYPES
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_AGGREGATION_KINDS
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_ONTOLOGICAL_NATURES
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_ABSTRACT_ELEMENTS
+   :value: ()
+
+   
+
+.. py:data:: ONTOUML_CONCRETE_ELEMENTS
+   :value: ()
+
+   
+

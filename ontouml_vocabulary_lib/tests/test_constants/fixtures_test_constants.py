@@ -1,9 +1,30 @@
-from ontouml_vocabulary_lib.constants.constants_classes import ONTOUML_BASE_SORTAL_CLASS_STEREOTYPES, \
-    ONTOUML_ULTIMATE_SORTAL_CLASS_STEREOTYPES, ONTOUML_SORTAL_CLASS_STEREOTYPES, ONTOUML_NON_SORTAL_CLASS_STEREOTYPES, \
-    ONTOUML_ABSTRACT_CLASS_STEREOTYPES, ONTOUML_RIGID_CLASS_STEREOTYPES, ONTOUML_ANTI_RIGID_CLASS_STEREOTYPES, \
-    ONTOUML_SEMI_RIGID_CLASS_STEREOTYPES, ONTOUML_CLASS_STEREOTYPES
-from ontouml_vocabulary_lib.constants.constants_misc import ONTOUML_RELATION_STEREOTYPES, ONTOUML_PROPERTY_STEREOTYPES, \
-    ONTOUML_AGGREGATION_KINDS, ONTOUML_ONTOLOGICAL_NATURES, ONTOUML_ABSTRACT_ELEMENTS, ONTOUML_CONCRETE_ELEMENTS
+"""Fixtures for testing the OntoUML constants.
+
+This module provides fixtures for testing the constant values defined in the OntoUML vocabulary library. It imports
+various sets of predefined constants from the OntoUML vocabulary library and defines a dictionary to store the expected
+size of these sets. It also provides a set of utility functions for performing basic manipulations on tuples, which are
+used to generate a list of mutated tuples for testing.
+"""
+
+from ontouml_vocabulary_lib.constants.constants_classes import (
+    ONTOUML_BASE_SORTAL_CLASS_STEREOTYPES,
+    ONTOUML_ULTIMATE_SORTAL_CLASS_STEREOTYPES,
+    ONTOUML_SORTAL_CLASS_STEREOTYPES,
+    ONTOUML_NON_SORTAL_CLASS_STEREOTYPES,
+    ONTOUML_ABSTRACT_CLASS_STEREOTYPES,
+    ONTOUML_RIGID_CLASS_STEREOTYPES,
+    ONTOUML_ANTI_RIGID_CLASS_STEREOTYPES,
+    ONTOUML_SEMI_RIGID_CLASS_STEREOTYPES,
+    ONTOUML_CLASS_STEREOTYPES,
+)
+from ontouml_vocabulary_lib.constants.constants_misc import (
+    ONTOUML_RELATION_STEREOTYPES,
+    ONTOUML_PROPERTY_STEREOTYPES,
+    ONTOUML_AGGREGATION_KINDS,
+    ONTOUML_ONTOLOGICAL_NATURES,
+    ONTOUML_ABSTRACT_ELEMENTS,
+    ONTOUML_CONCRETE_ELEMENTS,
+)
 
 DICT_TUPLES_SIZE = {
     ONTOUML_BASE_SORTAL_CLASS_STEREOTYPES: 4,
@@ -25,7 +46,7 @@ DICT_TUPLES_SIZE = {
 
 
 def swap_first_two(original: tuple) -> tuple:
-    """Swaps the first two elements of a given tuple.
+    """Swap the first two elements of a given tuple.
 
     :param original: The original tuple.
     :type original: tuple
@@ -40,7 +61,7 @@ def swap_first_two(original: tuple) -> tuple:
 
 
 def remove_first(original: tuple) -> tuple:
-    """Removes the first element from a given tuple.
+    """Remove the first element from a given tuple.
 
     :param original: The original tuple.
     :type original: tuple
@@ -51,7 +72,7 @@ def remove_first(original: tuple) -> tuple:
 
 
 def add_element(original: tuple) -> tuple:
-    """Adds a None element to the end of a given tuple.
+    """Add a None element to the end of a given tuple.
 
     :param original: The original tuple.
     :type original: tuple
@@ -62,7 +83,7 @@ def add_element(original: tuple) -> tuple:
 
 
 def replace_last(original: tuple) -> tuple:
-    """Replaces the last element of a given tuple with the string "REPLACEMENT".
+    """Replace the last element of a given tuple with the string "REPLACEMENT".
 
     :param original: The original tuple.
     :type original: tuple
@@ -73,7 +94,7 @@ def replace_last(original: tuple) -> tuple:
 
 
 def reverse_order(original: tuple) -> tuple:
-    """Reverses the order of elements in a given tuple.
+    """Reverse the order of elements in a given tuple.
 
     :param original: The original tuple.
     :type original: tuple

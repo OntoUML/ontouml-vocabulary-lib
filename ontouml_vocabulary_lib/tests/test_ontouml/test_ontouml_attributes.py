@@ -3,13 +3,16 @@ import pytest
 from rdflib import URIRef
 
 from ontouml_vocabulary_lib.ontouml import OntoUML
-from ontouml_vocabulary_lib.tests.test_ontouml.fixtures_test_ontouml import ALL_TERMS_STR, OK_BASE_URI, \
-    ALL_TERMS_FRAGMENT, NOK_BASE_URI
+from ontouml_vocabulary_lib.tests.test_ontouml.fixtures_test_ontouml import (
+    ALL_TERMS_STR,
+    OK_BASE_URI,
+    ALL_TERMS_FRAGMENT,
+    NOK_BASE_URI,
+)
 
 
 def test_internal_term_presence_and_type() -> None:
-    """
-    Ensure internal terms in OntoUML are present in ALL_TERMS_STR and are instances of URIRef.
+    """Ensure internal terms in OntoUML are present in ALL_TERMS_STR and are instances of URIRef.
 
     This function loops through every internal term of the OntoUML class, converts it to a Python datatype if possible,
     and then verifies:
@@ -87,8 +90,8 @@ def test_ontouml_term_accessibility(term: str) -> None:
 
     Using getattr, the function dynamically retrieves OntoUML class attributes using terms from ALL_TERMS_STR, ensuring:
     - The accessed attribute is not None.
-    - No exceptions are raised during access. If an exception occurs, the function fails and provides an error message with
-      the exception’s details.
+    - No exceptions are raised during access. If an exception occurs, the function fails and provides an error
+    message with the exception’s details.
 
     :param term: A term from the ALL_TERMS_STR list, representing an OntoUML term to be accessed.
     :type term: str

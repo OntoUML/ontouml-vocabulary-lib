@@ -54,9 +54,6 @@ def test_tuple_size_matches_expected(in_tuple: tuple, size: int) -> None:
     assert len(in_tuple) == size
 
 
-
-
-
 @pytest.mark.parametrize("in_tuple", DICT_TUPLES_SIZE.keys())
 def test_elements_are_unique(in_tuple: tuple) -> None:
     """Test to ensure that all elements within a tuple are unique.
@@ -65,7 +62,6 @@ def test_elements_are_unique(in_tuple: tuple) -> None:
     :type in_tuple: tuple
     """
     assert len(in_tuple) == len(set(in_tuple)), "Duplicate elements found in tuple."
-
 
 
 @pytest.mark.parametrize("in_tuple", DICT_TUPLES_SIZE.keys())
@@ -94,6 +90,7 @@ def test_tuple_mutation(original: tuple, mutation_func, mutant: tuple) -> None:
     :type mutant: tuple
     """
     if len(original) > 1:
-        assert (
-            original != mutant
-        ), f"Mutant {mutant} (created by {mutation_func.__name__}) is not detected as different from the original {original}."
+        assert original != mutant, (
+            f"Mutant {mutant} (created by {mutation_func.__name__}) is not detected as different "
+            f"from the original {original}."
+        )

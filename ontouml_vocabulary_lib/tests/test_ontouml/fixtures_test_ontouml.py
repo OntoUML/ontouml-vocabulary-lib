@@ -1,3 +1,10 @@
+"""Fixtures for testing the OntoUML class's methods.
+
+This module contains fixtures for testing various aspects of OntoUML, including validation of terms and URIs based on
+the OntoUML vocabulary. It defines lists of valid and invalid inputs, along with the expected fragments and strings
+for OntoUML terms and URIs.
+"""
+
 ALL_TERMS_FRAGMENT = [
     "abstract",
     "abstractNature",

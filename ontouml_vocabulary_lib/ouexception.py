@@ -19,5 +19,10 @@ class OUUnavailableTerm(ValueError):
     """
 
     def __init__(self, ou_term: str) -> None:
+        """Initialize the OUUnavailableTerm exception with the specified OUTerm.
+
+        :param ou_term: The OUTerm that does not exist in the OntoUML Vocabulary.
+        :type ou_term: str
+        """
         message = f"The OUTerm '{ou_term}' does not exist in the OntoUML Vocabulary."
         super().__init__(message)

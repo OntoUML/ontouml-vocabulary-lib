@@ -3,8 +3,12 @@ import pytest
 from rdflib import URIRef
 
 from ontouml_vocabulary_lib.ontouml import OntoUML
-from ontouml_vocabulary_lib.tests.test_ontouml.fixtures_test_ontouml import ALL_TERMS_STR, OK_BASE_URI, NOK_BASE_URI, \
-    INVALID_INPUTS
+from ontouml_vocabulary_lib.tests.test_ontouml.fixtures_test_ontouml import (
+    ALL_TERMS_STR,
+    OK_BASE_URI,
+    NOK_BASE_URI,
+    INVALID_INPUTS,
+)
 
 
 def test_get_list_all_method_valid_ontouml_attribute_existence() -> None:
