@@ -1,7 +1,7 @@
-:py:mod:`ontouml_vocabulary_lib.ontouml`
-========================================
+:py:mod:`ontouml_vocabulary_lib.terms`
+======================================
 
-.. py:module:: ontouml_vocabulary_lib.ontouml
+.. py:module:: ontouml_vocabulary_lib.terms
 
 .. autoapi-nested-parse::
 
@@ -42,7 +42,7 @@ Classes
 
 .. autoapisummary::
 
-   ontouml_vocabulary_lib.ontouml.OntoUML
+   ontouml_vocabulary_lib.terms.OntoUML
 
 
 

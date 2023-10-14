@@ -1,7 +1,7 @@
-:py:mod:`ontouml_vocabulary_lib.ouexception`
-============================================
+:py:mod:`ontouml_vocabulary_lib.exceptions`
+===========================================
 
-.. py:module:: ontouml_vocabulary_lib.ouexception
+.. py:module:: ontouml_vocabulary_lib.exceptions
 
 .. autoapi-nested-parse::
 

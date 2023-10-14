@@ -103,7 +103,7 @@ Now, you're ready to make enhancements or fixes and contribute back to ontouml-v
 
 The **ontouml-vocabulary-lib** is a Python library tailored for managing OntoUML concepts on [RDFLib](https://rdflib.readthedocs.io/en/stable/) graphs.
 
-The library complies with the [OntoUML vocabulary]((https://w3id.org/ontouml/vocabulary))—ensuring compatibility with its [version 1.1.0](https://w3id.org/ontouml/vocabulary/v1.1.0).
+The library complies with the [OntoUML vocabulary](https://w3id.org/ontouml/vocabulary)—ensuring compatibility with its [version 1.1.0](https://w3id.org/ontouml/vocabulary/v1.1.0).
 
 ### The OntoUML Vocabulary
 
@@ -141,15 +141,13 @@ Here are the methods provided by the `OntoUML` class:
 
 #### Usage Examples
 
-For having access to the OntoUML concept, the following importing is required:
-```python
-from ontouml_vocabulary_lib import OntoUML
-```
+Below are some practical examples illustrating how to utilize the OntoUML Terms concept.
 
 1. Accessing a specific OntoUML Term:
 
 ```python
 # Accessing a specific OntoUML term
+from ontouml_vocabulary_lib import OntoUML
 my_ontouml_class = OntoUML.Class
 
 # Output
@@ -162,6 +160,7 @@ The result "https://w3id.org/ontouml#Class" from box 1 is of [type URIRef in RDF
 
 ```python
 # Accessing all OntoUML terms
+from ontouml_vocabulary_lib import OntoUML
 all_terms = OntoUML.get_list_all()
 
 # Output
@@ -176,6 +175,7 @@ The `get_namespace` method is used to retrieve the namespace URI for OntoUML Voc
 
 ```python
 # Getting the namespace for OntoUML
+from ontouml_vocabulary_lib import OntoUML
 namespace_uri = OntoUML.get_namespace()
 
 # Output
@@ -183,8 +183,6 @@ print(namespace_uri)  # https://w3id.org/ontouml#
 ```
 
 These methods ease the process of working with OntoUML terms, making it intuitive to use them within your projects.
-
-### OntoUML Constants
 
 ### OntoUML Constants
 
@@ -211,22 +209,23 @@ The `ontouml-vocabulary-lib` library includes a set of predefined constants that
 
 #### Usage Examples
 
-In these examples, we are utilizing the `*` import statement to import all the constants from the `constants_classes` and `constants_misc` modules within the `ontouml_vocabulary_lib.constants` sub-package. Ensure you have the `ontouml-vocabulary-lib` library installed and accessible in your environment.
+Below are some practical examples illustrating how to utilize the OntoUML Terms concept. In these examples, we are utilizing the `*` import statement to import all the constants from the `constants_classes` and `constants_misc` modules within the `ontouml_vocabulary_lib.constants` sub-package. Ensure you have the `ontouml-vocabulary-lib` library installed and accessible in your environment.
 
 1. **Listing All Base Sortal Class Stereotypes**:
 ```python
 from ontouml_vocabulary_lib.constants.constants_classes import *
 
 # Listing all base sortal class stereotypes
+# The tuple contains stereotypes that are considered as base sortals in OntoUML
 print(ONTOUML_BASE_SORTAL_CLASS_STEREOTYPES)
 ```
 
-Output: 
+Output:
 ```txt
-(OntoUML.historicalRole, OntoUML.phase, OntoUML.role, OntoUML.subkind)
+(rdflib.term.URIRef('https://w3id.org/ontouml#historicalRole'), rdflib.term.URIRef('https://w3id.org/ontouml#phase'), rdflib.term.URIRef('https://w3id.org/ontouml#role'), rdflib.term.URIRef('https://w3id.org/ontouml#subkind'))
 ```
 
-2. Validating an OntoUML Concept against a Set of Stereotypes:
+2. **Validating an OntoUML Concept against a Set of Stereotypes**:
 
 ```python
 from ontouml_vocabulary_lib.constants.constants_classes import *
@@ -236,6 +235,7 @@ from ontouml_vocabulary_lib.terms import OntoUML
 given_ontouml_concept = OntoUML.kind
 
 # Validate if it's a base sortal
+# Checking if the given OntoUML concept is part of the base sortal class stereotypes
 is_base_sortal = given_ontouml_concept in ONTOUML_BASE_SORTAL_CLASS_STEREOTYPES
 
 # Output the validation result
@@ -244,7 +244,7 @@ print("Yes" if is_base_sortal else "No")
 ```
 Output:
 ```txt
-Is OntoUML.kind a base sortal stereotype?
+Is https://w3id.org/ontouml#kind a base sortal stereotype?
 No
 ```
 3. Comparing Values between Different Sets of Stereotypes:
@@ -252,48 +252,28 @@ No
 ```python
 from ontouml_vocabulary_lib.constants.constants_classes import *
 
-# Retrieve all ultimate and base sortals
-all_ultimate_sortals = ONTOUML_ULTIMATE_SORTAL_CLASS_STEREOTYPES
-all_base_sortals = ONTOUML_BASE_SORTAL_CLASS_STEREOTYPES
+# Retrieve all ultimate sortals and rigid types
+all_ultimate_sortal_classes = ONTOUML_ULTIMATE_SORTAL_CLASS_STEREOTYPES
+all_rigid_types = ONTOUML_RIGID_CLASS_STEREOTYPES
 
-# Find common stereotypes between ultimate and base sortals, if any
-common_stereotypes = set(all_ultimate_sortals).intersection(set(all_base_sortals))
+# Find common stereotypes between both, if any
+# Using set intersection to find common elements between the two tuples
+common_stereotypes = set(all_ultimate_sortal_classes).intersection(set(all_rigid_types))
 
 # Output common stereotypes
-print("Common stereotypes between Ultimate and Base Sortals:")
+print("Common stereotypes between Ultimate Sortals and Rigid types:")
 print(common_stereotypes)
-``````
+```
 
 Output:
 ```txt
-Common stereotypes between Ultimate and Base Sortals:
-{OntoUML.historicalRole, OntoUML.phase, OntoUML.role, OntoUML.subkind}
+Common stereotypes between Ultimate Sortals and Rigid types:
+{rdflib.term.URIRef('https://w3id.org/ontouml#quality'), rdflib.term.URIRef('https://w3id.org/ontouml#collective'), rdflib.term.URIRef('https://w3id.org/ontouml#relator'), rdflib.term.URIRef('https://w3id.org/ontouml#kind'), rdflib.term.URIRef('https://w3id.org/ontouml#quantity'), rdflib.term.URIRef('https://w3id.org/ontouml#mode')}
 ```
-
-4. Listing All Relation Stereotypes:
-```python
-from ontouml_vocabulary_lib.constants.constants_misc import *
-
-# Listing all relation stereotypes
-print(ONTOUML_RELATION_STEREOTYPES)
-```
-Output:
-```txt
-(OntoUML.bringsAbout, OntoUML.characterization, OntoUML.comparative, OntoUML.componentOf, OntoUML.creation, OntoUML.derivation, OntoUML.externalDependence, OntoUML.historicalDependence, OntoUML.instantiation, OntoUML.manifestation, OntoUML.material, OntoUML.mediation, OntoUML.memberOf, OntoUML.participation, OntoUML.participational, OntoUML.subCollectionOf, OntoUML.subQuantityOf, OntoUML.termination, OntoUML.triggers)
-```
-
-
-### OntoUML Exceptions
-
-This document provides a detailed explanation of the custom exceptions used in the handling and management of OntoUML graphs and related operations. These custom exceptions are designed to provide explicit and user-friendly error messages, assisting developers in debugging and resolving issues.
-
-For the current version, a single custom exception is defined.
-
-- **OUUnavailableTerm**: Raised when an OUTerm is not available or does not exist in the OntoUML Vocabulary.
 
 ## Code Testing
 
-The provided code was substantially tested. Tests can be accessed in the 'tests' folder and executed from within the project folder as follows:
+The code provided has undergone rigorous testing to ensure its reliability and correctness. The tests can be found in the 'tests' directory of the project. To run the tests, navigate to the project root directory and execute the following command:
 
 ```bash
 ontouml-vocabulary-lib> pytest .\ontouml_vocabulary_lib\tests
@@ -301,34 +281,34 @@ ontouml-vocabulary-lib> pytest .\ontouml_vocabulary_lib\tests
 
 ## How to Contribute
 
-### Report Issues
+### Reporting Issues
+- If you encounter a bug or wish to suggest a feature, please [open a new issue](https://github.com/OntoUML/ontouml-vocabulary-lib/issues/new).
+- If you notice any discrepancies in the documentation created with the aid of AI, feel free to [report them by opening an issue](https://github.com/OntoUML/ontouml-vocabulary-lib/issues/new).
 
-- Report bugs or suggest features by [opening an issue](https://github.com/OntoUML/ontouml-vocabulary-lib/issues/new).
-- Point out any discrepancies in the AI-generated documentation by [opening an issue](https://github.com/OntoUML/ontouml-vocabulary-lib/issues/new).
+### Code Contributions
+1. Fork the project repository and create a new feature branch for your work: `git checkout -b feature/YourFeatureName`.
+2. Make and commit your changes with descriptive commit messages.
+3. Push your work back up to your fork: `git push origin feature/YourFeatureName`.
+4. Submit a pull request to propose merging your feature branch into the main project repository.
 
-### Code Contribution
-
-1. Fork the Repository: Fork the project repository and create your feature branch: `git checkout -b feature/YourFeatureName`.
-2. Commit Changes: Make and commit your changes with meaningful commit messages.
-3. Push to Branch: Push your work back up to your fork: `git push origin feature/YourFeatureName`.
-4. Submit a Pull Request: Open a pull request to merge your feature branch into the main project repository.
-
-### Test Contribution
-
-- Improve reliability by adding or enhancing tests.
+### Test Contributions
+- Enhance the project's reliability by adding new tests or improving existing ones.
 
 ### General Guidelines
+- Ensure your code follows our coding standards.
+- Update the documentation as necessary.
+- Make sure your contributions do not introduce new issues.
 
-- Ensure your code adheres to our coding standards.
-- Update documentation as needed.
-- Ensure that your code does not introduce additional issues.
+We appreciate your time and expertise in contributing to this project!
 
-Thank you for investing your time and expertise into this project!
+## License
+
+This project is licensed under the Apache License 2.0. See the [LICENSE](https://github.com/OntoUML/ontouml-vocabulary-lib/blob/main/LICENSE) file for details.
 
 ## Author
 
-This project is maintained by the [Semantics, Cybersecurity & Services (SCS) Group](https://www.utwente.nl/en/eemcs/scs/) of the [University of Twente](https://www.utwente.nl/), The Netherlands. Its developer is:
+This project is an initiative of the [Semantics, Cybersecurity & Services (SCS) Group](https://www.utwente.nl/en/eemcs/scs/) at the [University of Twente](https://www.utwente.nl/), The Netherlands. The main developer is:
 
-- [Pedro Paulo Favato Barcelos](https://orcid.org/0000-0003-2736-7817) [[GitHub](https://github.com/pedropaulofb)] [[LinkedIn](https://www.linkedin.com/in/pedro-paulo-favato-barcelos/)]
+- Pedro Paulo Favato Barcelos [[GitHub](https://github.com/pedropaulofb)] [[LinkedIn](https://www.linkedin.com/in/pedro-paulo-favato-barcelos/)]
 
-Feel free to get in touch using the provided links. For questions, contributions, or to report any problem, you can **[open an issue](https://github.com/OntoUML/ontouml-vocabulary-lib/issues/new)** at this repository.
+Feel free to reach out using the provided links. For inquiries, contributions, or to report any issues, you can [open a new issue](https://github.com/OntoUML/ontouml-vocabulary-lib/issues/new) on this repository.
