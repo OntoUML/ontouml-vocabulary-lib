@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ontouml_vocabulary_lib"
-version = "1.0.0"
+version = "1.0.1"
 description = "OntoUML Python Library"
 license = "Apache-2.0"
 authors = ["Pedro Paulo F. Barcelos <p.p.favatobarcelos@utwente.nl>"]
