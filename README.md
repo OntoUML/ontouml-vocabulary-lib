@@ -1,3 +1,4 @@
+[![Zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10006200.svg)](https://doi.org/10.5281/zenodo.10006200)
 [![Project Status - Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 ![GitHub - Release Date - PublishedAt](https://img.shields.io/github/release-date/ontouml/ontouml-vocabulary-lib)
 ![GitHub - Last Commit - Branch](https://img.shields.io/github/last-commit/ontouml/ontouml-vocabulary-lib/main)
