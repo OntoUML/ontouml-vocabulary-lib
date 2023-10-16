@@ -5,7 +5,7 @@ repos:
     hooks:
       - id: run_tests
         name: run pytest tests
-        entry: pytest
+        entry: pytest ./ontouml_vocabulary_lib/tests
         language: system
         pass_filenames: false
       - id: update_requirements
