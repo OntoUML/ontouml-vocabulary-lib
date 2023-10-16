@@ -5,9 +5,11 @@ repos:
     hooks:
       - id: run_tests
         name: run pytest tests
-        entry: poetry run pytest ./ontouml_vocabulary_lib/tests
+        entry: pytest ./ontouml_vocabulary_lib/tests
         language: system
         pass_filenames: false
+        stages:
+          - manual
       - id: update_requirements
         name: update requirements.txt
         entry: poetry export -f requirements.txt --output requirements.txt --with dev
