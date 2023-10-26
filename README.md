@@ -18,6 +18,8 @@
 
 <p align="center"><img src="https://raw.githubusercontent.com/OntoUML/ontouml-vocabulary-lib/main/resources/logo-ontouml-vocabulary-lib-reduced.png" width="740"></p>
 
+The OntoUML Vocabulary Library is a Python library crafted for handling [OntoUML vocabulary's](https://w3id.org/ontouml/vocabulary) concepts on [RDFLib](https://rdflib.readthedocs.io/) graphs. This library advances the utilization of OntoUML in Semantic Web applications, bridging the gap between conceptual modeling in OntoUML and the Semantic Web technologies.
+
 **📦 PyPI Package:**
 The library is conveniently [available as a PyPI package](https://pypi.org/project/ontouml-vocabulary-lib/), allowing users to easily import it into other RDFLib/Python projects.
 
