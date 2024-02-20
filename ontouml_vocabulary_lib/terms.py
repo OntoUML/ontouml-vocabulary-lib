@@ -25,6 +25,7 @@ Example:
 For more information about the OntoUML vocabulary,
 refer to the official documentation at: https://w3id.org/ontouml/vocabulary
 """
+
 from rdflib import URIRef
 from rdflib.namespace import DefinedNamespace, Namespace
 

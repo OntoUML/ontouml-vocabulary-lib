@@ -5,6 +5,7 @@ semantically relevant means to access and utilize the stereotypes in OntoUML mod
 
 All tuples are provided sorted in alphabetical order.
 """
+
 from ..terms import OntoUML
 
 ONTOUML_BASE_SORTAL_CLASS_STEREOTYPES = (
