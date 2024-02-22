@@ -6,6 +6,7 @@ for utilizing OntoUML stereotypes in model construction and verification.
 
 All tuples are provided sorted in alphabetical order.
 """
+
 from ..terms import OntoUML
 
 ONTOUML_RELATION_STEREOTYPES = (

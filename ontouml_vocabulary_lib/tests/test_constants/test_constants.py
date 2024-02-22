@@ -4,6 +4,7 @@ This module carries out tests to validate tuples utilized in the OntoUML model, 
 within them adhere to the defined criteria (e.g., non-null, type adherence, etc.) and overall tuple integrity
 (e.g., non-emptiness, expected size, etc.).
 """
+
 import pytest
 from rdflib import URIRef
 

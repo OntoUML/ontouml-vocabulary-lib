@@ -1,4 +1,5 @@
 """Module for testing exclusively the attributes of the OntoUML class."""
+
 import pytest
 from rdflib import URIRef
 

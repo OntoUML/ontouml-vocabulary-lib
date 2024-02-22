@@ -1,4 +1,5 @@
 """Module for testing exclusively the method get_namespace()of the OntoUML class."""
+
 import pytest
 
 from ontouml_vocabulary_lib.terms import OntoUML
